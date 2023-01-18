@@ -1,0 +1,15 @@
+{% extends 'main/header.html' %}
+
+{% block title %}bWriter{% endblock %}
+
+{% block header %}
+
+<div class="features">
+	<h2>{{ article.title }}</h2>
+    <p>{{ article.date }}</p>
+    <p>{{ article.text }}</p>
+
+</div>
+
+{% endblock %}
+

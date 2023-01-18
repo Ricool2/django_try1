@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+  <meta charset="utf-8" />
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}">
+ </head>
+ <body>
+    <aside>
+        <img src="{% static 'main/pics/logo_header.png' %}">
+        <br><span class="logo">bWrtier</span></br>
+        <h3>Menu</h3>
+        <ul>
+            <a href="{% url 'main' %}"><li>Главная</li></a>
+            <a href="{% url 'books_main' %}"><li>Книги</li></a>
+            <a href="{% url 'about' %}"><li>О нас</li></a>
+            <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Добавить пункт</li></a>
+
+        </ul>
+    </aside>
+    <main>
+        {% block header %}
+        {% endblock %}  
+    </main>
+ 	
+ </body>
+</html>

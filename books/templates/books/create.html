@@ -1,0 +1,26 @@
+{% extends 'main/header.html' %}
+
+{% block title %}bWriter{% endblock %}
+
+{% block header %}
+
+<div class="features">
+	<h2>Добавление</h2>
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.title }}<br>
+        {{ form.author }}<br>
+        {{ form.text }}<br>
+        {{ form.date }}<br>
+        <span>{{error}}</span>
+
+        {% comment %} <input type="text" placeholder="Название книги" calss="form-control"><br>
+        <input type="text" placeholder="Автор" calss="form-control"><br>
+        <textarea class="form-control" placeholder="Текст"></textarea><br>
+        <input type="date" class="from-control"><br>{% endcomment %}
+        <button class="btn btn-success" type="submit">Добавить</button>     
+    </form>
+</div>
+
+{% endblock %}

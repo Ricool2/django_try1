@@ -1,0 +1,69 @@
+/*
+	vh - 
+	% - 
+	px - 
+	solid - 
+	{bold; } - 
+	hover - 
+	auto - 
+*/
+
+body {
+	background: #d2b48c;
+}
+
+aside {
+	float: left;						/*позиция*/
+	background: #c3b091;
+	width: 24%;							/*ширина*/
+	padding: 1.5%;						/*внутренние отступы*/
+	flex: 1 1 auto;
+	height: 100vh;						/*высота*/
+	border-right: 3px solid red;	   /*контур*/
+}
+
+aside img {
+	float: left;
+}
+
+aside .logo {
+	font-size: 40px;				/*Размер шрифта*/
+	margin-left: 10px;				/*отступ слева*/
+	font-weight: bold;				/*Ширина шрифта*/
+}
+
+aside ul {
+	list-style: none;				/*Стиль списка по умл*/
+
+}
+
+aside ul li {
+	color: #FFFFF0;
+	display: block;						/*блочный элемент*/
+	margin-top: 7px;					/*отступ сверхуй)*/
+	transition: transform .6s ease;		/*плавность*/
+}
+
+aside ul li:hover, aside ul a:hover {
+	color: #722f37;
+	text-decoration: none;			/*подчеркивание*/
+	transform: scale(1.05);			/*увеличение при наведении*/
+}
+
+main .features {
+	float: left;
+	color: #FFFFF0;
+	margin-left: 40px;
+	margin-top: 60px;
+	text-align: center;				/*выравнивание текста*/
+	width: 70%;
+}
+
+main .features h1 {
+	font-size: 50px;
+}
+
+main .features p {
+	max-width: 400px;
+	margin: 16px auto;				/*отступы верхних и бока*/
+}
